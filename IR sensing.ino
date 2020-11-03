@@ -17,7 +17,7 @@ int get_IR_reading(int pin)
 void setup() {
   // put your setup code here, to run once:
   pinMode(IR_LEFT, INPUT);
-  pinMode(IR_LEFT, OUTPUT);
+  pinMode(IR_RIGHT, INPUT);
 }
 
 void loop() 
