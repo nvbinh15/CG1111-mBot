@@ -166,7 +166,7 @@ long color() {
   }
 }
 
-void avg(int pin)
+int avg(int pin)
 {
   int sum = 0;
  for (int i = 0; i < 30; i += 1)
