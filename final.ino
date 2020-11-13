@@ -190,12 +190,16 @@ void loop()
     // solve the color challenges
     long detected_color = color();
     if (detected_color == 1) {
+     //detected_color == red
       turn_left();
     } else if (detected_color == 2) {
+     //detected_color == green
       turn_right();
     } else if (detected_color == 3) {
+     //detected_color == yellow
       turn180();
     } else if (detected_color == 4) {
+     //detected_color == black
       victory();
       delay(100000);
     }
