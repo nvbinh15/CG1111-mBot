@@ -169,9 +169,9 @@ void setup()
 
 void loop()
 {
-  // take the value returned by IR sensors
-  int output_right = analogRead(IR_RIGHT);
-  int output_left = analogRead(IR_LEFT);
+  // declaration of values returned by IR sensors
+  int output_right;
+  int output_left;
   
   // measure the distance between the front of the mBot and the front wall
   uint32_t distance = ultraSensor.distanceCm();
