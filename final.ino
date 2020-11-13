@@ -42,7 +42,7 @@ uint32_t delay180turn = 1000; // turn in 1000ms
 long setpointRight = 430;
 long setpointLeft = 970;
 
-// victory tune
+// play the victory tune
 void victory() {
  int melody[] = {
     NOTE_C6, NOTE_C6, NOTE_C6,
@@ -71,8 +71,11 @@ void victory() {
  }
 }
 
-// Detects a black line
-// returns 1 if there is black line or 0 if there is no black line
+/** 
+ * Detects a black line
+ * 
+ * @returns 1 if there is black line or 0 if there is no black line
+ */
 int is_black_line(){
  int sensorState = lineFinder.readSensors();
  if (sensorState == S1_IN_S2_IN ||sensorState == S1_IN_S2_OUT||sensorState == S1_OUT_S2_IN){
