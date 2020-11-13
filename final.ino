@@ -126,7 +126,8 @@ long color() {
     led.setColor(ledvalues[i][0],ledvalues[i][1], ledvalues[i][2]);
     led.show();
     delay(500);
-
+    
+    //Get reading 5 times
     for (int j=0;j<5;j++) {
       //ldr reading specific colour
       colour[i] += ldr.read();
@@ -135,7 +136,7 @@ long color() {
   }
   led.setColor(0,0,0);
   led.show();
-  // print values
+  // print average values
   for (int i=0;i<3;i++)
   {
     colour[i] /= 5;
