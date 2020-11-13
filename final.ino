@@ -197,19 +197,24 @@ void loop()
       delay(100000);
     }
   } else {
+   //Obtain the values from the IR_sensors
     output_right = analogRead(IR_RIGHT);
     output_left = analogRead(IR_LEFT);
-    while ((output_right > setpointRight) && (output_left < setpointLeft)) {
+   
+   //How the mBot runs when it is in the middle of the road 
+   while ((output_right > setpointRight) && (output_left < setpointLeft)) {
       motor_left.run(-MaxLeftSpeed);
       motor_right.run(MaxRightSpeed);
       delay(100);
       output_right = analogRead(IR_RIGHT);
       output_left = analogRead(IR_LEFT);
     }
+   
+   //How the mBot runs when it is too close to the left or the right
     if (output_left > setpointLeft) {
      motor_left.run(-MaxLeftSpeed);
      motor_right.run(MaxRightSpeed - 50);
-     delay(50);
+     delay(100);
     } else if (output_right < setpointRight) {
      motor_left.run(-MaxLeftSpeed + 80);
      motor_right.run(MaxRightSpeed);  
