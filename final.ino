@@ -86,6 +86,9 @@ int is_black_line(){
  }
 }
 
+/*
+ * mBot's movements
+ */
 void turn_right() {
     motor_left.run(-MaxLeftSpeed);
     motor_right.run(-100);
